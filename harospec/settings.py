@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0$x5vno(4#bz155i9_z(g52d&*+q5=s2qg7gxo4hbref2!=-+r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://harospec-db59debffd82.herokuapp.com/']
+ALLOWED_HOSTS = ['https://harospec-db59debffd82.herokuapp.com/','127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'site'
 ]
 
 MIDDLEWARE = [
