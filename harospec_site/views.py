@@ -10,7 +10,4 @@ def portfolio(request):
     return render(request, 'portfolio.html')
 
 def contact(request):
-    if request.method == "POST":
-        # Handle form submission here
-        pass
     return render(request, 'contact.html')
