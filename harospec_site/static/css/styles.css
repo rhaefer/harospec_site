@@ -84,6 +84,15 @@ header {
     padding: 20px;
     background: rgba(0, 0, 0, 0.3); /* Semi-transparent black for readability */
     border-radius: 10px;
+
+}
+
+.hero-content a {
+    color: #00aaff;
+}
+
+.hero-content a:hover {
+    color: #007acc;
 }
 
 .hero-content h1 {
@@ -124,32 +133,182 @@ section#services, section#portfolio, section#contact {
 
 .services-section {
     padding: 2em;
-    background-color: #f9f9f9; /* Light background for clarity */
-    color: #333; /* Dark text for readability */
+    background-color: #f9f9f9; /* Light background */
     text-align: center;
 }
 
 .services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 1.5em; /* Space between cards */
+    justify-items: center;
+    max-width: 1200px; /* Limit width of container */
+    margin: 0 auto;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5em;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #007BFF; /* Highlighted heading color */
+    margin-bottom: 0.5em;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.portfolio-section {
+    padding: 2em;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.portfolio-section h2 {
     font-size: 2rem;
     margin-bottom: 1em;
-    color: #444; /* Slightly muted heading */
+    color: #444;
 }
 
-.services-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 1.5em; /* Space between cards */
+    justify-items: center; /* Center cards horizontally */
+}
+
+.portfolio-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure content stays within the card */
+    width: 100%; /* Let the grid control the size */
+    max-width: 300px; /* Limit card width */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-card .portfolio-details {
+    padding: 1em;
+}
+
+.portfolio-card h3 {
+    font-size: 1.25rem;
+    margin: 0 0 0.5em;
+    color: #333;
+}
+
+.portfolio-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+
+.contact-section {
+    padding: 2em;
+    background-color: #f9f9f9; /* Light background */
+    text-align: center;
+    border-radius: 10px;
     max-width: 600px;
-    text-align: left; /* Align list items to the left */
+    margin: 2em auto; /* Center align */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-.services-list li {
-    font-size: 1.2rem;
-    margin-bottom: 0.5em;
-    padding: 0.5em 0;
-    border-bottom: 1px solid #ddd; /* Optional: Add a subtle divider */
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    color: #333; /* Darker text for contrast */
 }
 
-.services-list li:last-child {
-    border-bottom: none; /* Remove divider for the last item */
+form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 1.5em; /* Space between form groups */
+}
+
+.form-group {
+    text-align: left; /* Align labels to the left */
+    display: flex;
+    flex-direction: column; /* Stack label and input */
+    gap: 0.5em;
+}
+
+label {
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+}
+
+input, textarea {
+    font-size: 1rem;
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #007BFF; /* Add focus effect */
+}
+
+textarea {
+    resize: vertical; /* Allow resizing only vertically */
+}
+
+.btn {
+    background-color: #007BFF; /* Primary color */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.btn:active {
+    background-color: #003f7f; /* Even darker shade on click */
+    transform: translateY(0); /* Reset lift effect */
 }
