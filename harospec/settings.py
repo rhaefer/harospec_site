@@ -56,7 +56,7 @@ ROOT_URLCONF = 'harospec.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],  # Ensure this includes the templates folder
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

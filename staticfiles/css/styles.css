@@ -121,3 +121,35 @@ section#services, section#portfolio, section#contact {
         gap: 1em;
     }
 }
+
+.services-section {
+    padding: 2em;
+    background-color: #f9f9f9; /* Light background for clarity */
+    color: #333; /* Dark text for readability */
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    color: #444; /* Slightly muted heading */
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: left; /* Align list items to the left */
+}
+
+.services-list li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #ddd; /* Optional: Add a subtle divider */
+}
+
+.services-list li:last-child {
+    border-bottom: none; /* Remove divider for the last item */
+}
