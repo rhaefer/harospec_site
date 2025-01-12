@@ -35,3 +35,9 @@ def project2(request):
 
 def project3(request):
     return render(request, 'project3.html')
+
+def project4(request):
+    return render(request, 'project4.html')
+
+def project5(request):
+    return render(request, 'project5.html')
